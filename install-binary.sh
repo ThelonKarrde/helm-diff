@@ -14,6 +14,7 @@ export GREP_COLOR="never"
 if command -v cygpath >/dev/null 2>&1; then
   HELM_BIN="$(cygpath -u "${HELM_BIN}")"
   HELM_PLUGIN_DIR="$(cygpath -u "${HELM_PLUGIN_DIR}")"
+  echo $HELM_PLUGIN_DIR
 fi
 
 [ -z "$HELM_BIN" ] && HELM_BIN=$(command -v helm)
